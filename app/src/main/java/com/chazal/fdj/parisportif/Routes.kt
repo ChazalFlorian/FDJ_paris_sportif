@@ -7,4 +7,7 @@ sealed class Routes {
 
     @Serializable
     data object Splash
+
+    @Serializable
+    data object Search
 }
