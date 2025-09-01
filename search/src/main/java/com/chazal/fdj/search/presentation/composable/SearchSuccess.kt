@@ -29,7 +29,7 @@ fun SearchSuccess(
             SearchItem(
                 search = item,
                 isEven = key % 2 == 0,
-                onItemClick = { action.onLeagueClick(item.id) })
+                onItemClick = { action.onLeagueClick(item.league) })
         }
     }
 }
