@@ -63,6 +63,7 @@ ext-junit = { module = "androidx.test.ext:junit", version.ref = "ext-junit" }
 navigation = ['android-navigation', 'android-navigation-runtime']
 retrofit = ["retrofit", "retrofit-gson-converter", "retrofit-logging", "retrofit-adapter"]
 coroutine = ["coroutine-core", "coroutine-android", "coroutine-test"]
+test = ["junit", "mockk", "coroutine-test", "koin-test"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
