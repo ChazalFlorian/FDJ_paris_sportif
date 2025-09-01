@@ -2,11 +2,12 @@ package com.chazal.fdj.search.data.datasource
 
 import com.chazal.fdj.search.CoroutineTestRule
 import com.chazal.fdj.search.dummySearchResponse
+import com.chazal.fdj.shared.data.search.datasource.SearchDataSource
 import io.mockk.MockKAnnotations.init
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.test.runTest
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

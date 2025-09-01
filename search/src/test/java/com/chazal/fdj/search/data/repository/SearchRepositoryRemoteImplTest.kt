@@ -1,9 +1,10 @@
 package com.chazal.fdj.search.data.repository
 
 import com.chazal.fdj.search.CoroutineTestRule
-import com.chazal.fdj.search.data.datasource.SearchDataSource
 import com.chazal.fdj.search.dummySearchResponse
 import com.chazal.fdj.search.dummySearchResultItem
+import com.chazal.fdj.shared.data.search.datasource.SearchDataSource
+import com.chazal.fdj.shared.domain.search.repository.SearchRepository
 import io.mockk.MockKAnnotations.init
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
@@ -13,7 +14,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import kotlin.jvm.Throws
 
 class SearchRepositoryImplTest {
 

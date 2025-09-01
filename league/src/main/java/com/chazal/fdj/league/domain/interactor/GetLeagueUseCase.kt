@@ -1,8 +1,8 @@
 package com.chazal.fdj.league.domain.interactor
 
-import com.chazal.fdj.league.data.repository.LeagueRepository
 import com.chazal.fdj.league.domain.mapper.toLeagueUI
 import com.chazal.fdj.league.domain.model.LeagueUI
+import com.chazal.fdj.shared.domain.league.repository.LeagueRepository
 
 interface GetLeaguesUseCase {
     suspend fun getLeagues(query: String): LeagueUI

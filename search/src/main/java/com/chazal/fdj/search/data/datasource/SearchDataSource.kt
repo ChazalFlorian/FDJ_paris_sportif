@@ -1,11 +1,7 @@
 package com.chazal.fdj.search.data.datasource
 
-import com.chazal.fdj.search.data.model.SearchResponse
-
-interface SearchDataSource {
-
-    suspend fun getSearchResults(): Result<SearchResponse>
-}
+import com.chazal.fdj.shared.data.search.datasource.SearchDataSource
+import com.chazal.fdj.shared.data.search.model.SearchResponse
 
 class SearchDataSourceImpl(
     private val searchService: SearchService,

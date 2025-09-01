@@ -4,7 +4,3 @@ data class LeagueUI(
     val content: List<LeagueItemBlockUI>
 )
 
-data class LeagueItemBlockUI(
-    val logoUrl: String,
-    val description: String
-)

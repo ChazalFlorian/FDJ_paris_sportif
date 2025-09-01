@@ -1,8 +1,9 @@
 package com.chazal.fdj.league.data.repository
 
 import com.chazal.fdj.league.CoroutineTestRule
-import com.chazal.fdj.league.data.datasource.LeagueDataSource
 import com.chazal.fdj.league.dummyLeagueResponseSuccess
+import com.chazal.fdj.shared.data.league.datasource.LeagueDataSource
+import com.chazal.fdj.shared.domain.league.repository.LeagueRepository
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK

@@ -1,13 +1,10 @@
 package com.chazal.fdj.league.data.datasource
 
-import com.chazal.fdj.league.data.model.LeagueResponse
-
-interface LeagueDataSource {
-    suspend fun getLeagues(query: String) : Result<LeagueResponse>
-}
+import com.chazal.fdj.shared.data.league.datasource.LeagueDataSource
+import com.chazal.fdj.shared.data.league.model.LeagueResponse
 
 class LeagueDataSourceImpl(
-    private val service: LeagueService
+    private val service: LeagueService,
 ) : LeagueDataSource {
     override suspend fun getLeagues(query: String): Result<LeagueResponse> {
         return service.getLeagueDetail(query)

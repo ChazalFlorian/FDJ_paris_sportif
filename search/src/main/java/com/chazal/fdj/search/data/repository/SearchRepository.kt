@@ -1,13 +1,10 @@
 package com.chazal.fdj.search.data.repository
 
-import com.chazal.fdj.search.data.datasource.SearchDataSource
-import com.chazal.fdj.search.data.model.SearchResponseItem
+import com.chazal.fdj.shared.data.search.datasource.SearchDataSource
+import com.chazal.fdj.shared.data.search.model.SearchResponseItem
+import com.chazal.fdj.shared.domain.search.repository.SearchRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-
-interface SearchRepository {
-    suspend fun getSearch(): List<SearchResponseItem>
-}
 
 class SearchRepositoryRemoteImpl(
     val dataSource: SearchDataSource,

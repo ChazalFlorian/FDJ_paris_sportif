@@ -45,9 +45,11 @@ dependencies {
     implementation(libs.glide)
     implementation(libs.bundles.retrofit)
     implementation(project(":network"))
+    implementation(project(":shared"))
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     testImplementation(libs.bundles.test)
+    testImplementation(project(":shared"))
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }

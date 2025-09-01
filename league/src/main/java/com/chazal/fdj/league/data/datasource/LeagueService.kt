@@ -1,6 +1,6 @@
 package com.chazal.fdj.league.data.datasource
 
-import com.chazal.fdj.league.data.model.LeagueResponse
+import com.chazal.fdj.shared.data.league.model.LeagueResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

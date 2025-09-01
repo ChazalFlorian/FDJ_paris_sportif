@@ -1,7 +1,7 @@
 package com.chazal.fdj.league.domain.mapper
 
-import com.chazal.fdj.league.data.model.LeagueResponse
-import com.chazal.fdj.league.data.model.TeamResponse
+import com.chazal.fdj.shared.data.league.model.LeagueResponse
+import com.chazal.fdj.shared.data.league.model.TeamResponse
 import com.chazal.fdj.league.domain.model.LeagueItemBlockUI
 import com.chazal.fdj.league.domain.model.LeagueUI
 

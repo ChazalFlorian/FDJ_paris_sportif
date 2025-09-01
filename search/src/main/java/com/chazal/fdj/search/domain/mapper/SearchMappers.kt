@@ -1,6 +1,6 @@
 package com.chazal.fdj.search.domain.mapper
 
-import com.chazal.fdj.search.data.model.SearchResponseItem
+import com.chazal.fdj.shared.data.search.model.SearchResponseItem
 import com.chazal.fdj.search.domain.model.SearchItemBlockUI
 import com.chazal.fdj.search.domain.model.SearchUI
 

@@ -1,6 +1,6 @@
 package com.chazal.fdj.search.data.datasource
 
-import com.chazal.fdj.search.data.model.SearchResponse
+import com.chazal.fdj.shared.data.search.model.SearchResponse
 import retrofit2.http.GET
 
 interface SearchService {

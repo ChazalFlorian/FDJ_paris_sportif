@@ -1,9 +1,9 @@
 package com.chazal.fdj.search.domain.interactor
 
 import com.chazal.fdj.search.CoroutineTestRule
-import com.chazal.fdj.search.data.repository.SearchRepository
 import com.chazal.fdj.search.dummySearchResultItem
 import com.chazal.fdj.search.dummySuccessResponse
+import com.chazal.fdj.shared.domain.search.repository.SearchRepository
 import io.mockk.MockKAnnotations.init
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK

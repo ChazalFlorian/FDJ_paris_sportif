@@ -1,4 +1,4 @@
-package com.chazal.fdj.league.data.model
+package com.chazal.fdj.shared.data.league.model
 
 import androidx.annotation.Keep
 
