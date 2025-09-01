@@ -11,7 +11,7 @@ interface LeagueRepository {
     suspend fun getLeagues(query: String): LeagueResponse
 }
 
-class LeagueRepositoryImpl(
+class LeagueRepositoryRemoteImpl(
     private val dataSource: LeagueDataSource,
 ) : LeagueRepository {
 

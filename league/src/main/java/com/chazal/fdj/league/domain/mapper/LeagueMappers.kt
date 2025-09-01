@@ -8,7 +8,7 @@ import com.chazal.fdj.league.domain.model.LeagueUI
 internal fun LeagueResponse.toLeagueUI() = LeagueUI(
     content = teams.map {
         it.toLeagueItemBlockUI()
-    }
+    }.filterResponse()
 )
 
 private fun TeamResponse.toLeagueItemBlockUI() = LeagueItemBlockUI(
