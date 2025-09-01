@@ -1,5 +1,6 @@
 package com.chazal.fdj.search.presentation
 
+import com.chazal.fdj.search.domain.model.SearchItemBlockUI
 import com.chazal.fdj.search.domain.model.SearchUI
 
 sealed class SearchState {

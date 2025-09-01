@@ -37,7 +37,7 @@ fun App(
                 val vm: SearchViewModel by inject(SearchViewModel::class.java)
                 SearchScreen(
                     action = SearchAction(
-                        search = vm::searchInput
+                        search = vm::filterSearchResults
                     ),
                     state = vm.uiState.collectAsState()
                 )

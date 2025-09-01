@@ -16,7 +16,7 @@ internal fun providesClient(): Retrofit {
         .addInterceptor(httpLoggingInterceptor)
         .build()
 
-    return Retrofit.Builder().baseUrl("${Constants.BASE_URL}${Constants.API_KEY}")
+    return Retrofit.Builder().baseUrl("${Constants.BASE_URL}${Constants.API_KEY}/")
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(ResultCallAdapterFactory.create())
         .client(okHttpBuilder)
