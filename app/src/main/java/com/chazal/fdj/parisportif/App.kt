@@ -1,12 +1,9 @@
 package com.chazal.fdj.parisportif
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -14,12 +11,15 @@ import androidx.navigation.compose.rememberNavController
 import com.chazal.fdj.parisportif.Routes.Search
 import com.chazal.fdj.parisportif.splash.presentation.SplashScreen
 import com.chazal.fdj.parisportif.ui.theme.FDJTheme
+import com.chazal.fdj.search.presentation.SearchAction
+import com.chazal.fdj.search.presentation.SearchScreen
+import com.chazal.fdj.search.presentation.SearchViewModel
+import org.koin.java.KoinJavaComponent.inject
 
 @Composable
 fun App(
     navController: NavHostController = rememberNavController(),
 ) {
-    val context = LocalContext.current
     FDJTheme {
         NavHost(
             navController = navController,
@@ -27,12 +27,20 @@ fun App(
             modifier = Modifier.fillMaxSize()
         ) {
             composable<Routes.Splash> {
-                SplashScreen()
+                SplashScreen(
+                    goToNext = {
+                        navController.navigate(Search)
+                    }
+                )
             }
             composable<Search> {
-                Column {
-
-                }
+                val vm: SearchViewModel by inject(SearchViewModel::class.java)
+                SearchScreen(
+                    action = SearchAction(
+                        search = vm::searchInput
+                    ),
+                    state = vm.uiState.collectAsState()
+                )
             }
         }
     }
