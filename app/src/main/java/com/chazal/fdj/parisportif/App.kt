@@ -11,7 +11,6 @@ import androidx.navigation.compose.rememberNavController
 import com.chazal.fdj.league.presentation.LeagueScreen
 import com.chazal.fdj.league.presentation.LeagueViewModel
 import com.chazal.fdj.parisportif.Routes.Search
-import com.chazal.fdj.parisportif.splash.presentation.SplashScreen
 import com.chazal.fdj.parisportif.ui.theme.FDJTheme
 import com.chazal.fdj.search.presentation.SearchAction
 import com.chazal.fdj.search.presentation.SearchScreen
@@ -25,16 +24,9 @@ fun App(
     FDJTheme {
         NavHost(
             navController = navController,
-            startDestination = Routes.Splash,
+            startDestination = Routes.Search,
             modifier = Modifier.fillMaxSize()
         ) {
-            composable<Routes.Splash> {
-                SplashScreen(
-                    goToNext = {
-                        navController.navigate(Search)
-                    }
-                )
-            }
             composable<Search> {
                 val vm: SearchViewModel by inject(SearchViewModel::class.java)
                 SearchScreen(
