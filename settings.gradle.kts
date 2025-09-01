@@ -23,3 +23,4 @@ rootProject.name = "FDJ Paris Sportifs"
 include(":app")
 include(":search")
 include(":league")
+include(":network")

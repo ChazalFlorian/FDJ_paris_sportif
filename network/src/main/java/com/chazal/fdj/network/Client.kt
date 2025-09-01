@@ -1,14 +1,13 @@
-package com.chazal.fdj.parisportif.core.network
+package com.chazal.fdj.network
 
 import android.util.Log
-import com.chazal.fdj.parisportif.core.Constants
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-internal fun providesClient(): Retrofit {
+fun providesClient(): Retrofit {
     val httpLoggingInterceptor = HttpLoggingInterceptor { message -> Log.d("DEBUG", message) }
         .apply { level = HttpLoggingInterceptor.Level.BODY }
 
