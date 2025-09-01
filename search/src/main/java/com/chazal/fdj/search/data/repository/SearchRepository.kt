@@ -17,8 +17,8 @@ class SearchRepositoryRemoteImpl(
             onSuccess = {
                 it.leagues
             },
-            onFailure = {
-                throw Exception("Network Error while fetching leagues")
+            onFailure = { e ->
+                throw e
             }
         )
     }

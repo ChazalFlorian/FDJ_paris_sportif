@@ -37,7 +37,10 @@ fun App(
                 val vm: SearchViewModel by inject(SearchViewModel::class.java)
                 SearchScreen(
                     action = SearchAction(
-                        search = vm::filterSearchResults
+                        search = vm::filterSearchResults,
+                        onLeagueClick = { id ->
+                            navController.navigate(Routes.League(LeagueParameter(id)))
+                        },
                     ),
                     state = vm.uiState.collectAsState()
                 )
