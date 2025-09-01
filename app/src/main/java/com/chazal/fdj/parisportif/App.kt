@@ -8,6 +8,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.chazal.fdj.league.presentation.LeagueScreen
+import com.chazal.fdj.league.presentation.LeagueViewModel
 import com.chazal.fdj.parisportif.Routes.Search
 import com.chazal.fdj.parisportif.splash.presentation.SplashScreen
 import com.chazal.fdj.parisportif.ui.theme.FDJTheme
@@ -39,10 +41,18 @@ fun App(
                     action = SearchAction(
                         search = vm::filterSearchResults,
                         onLeagueClick = { id ->
-                            navController.navigate(Routes.League(LeagueParameter(id)))
+                            navController.navigate(Routes.League(source = id))
                         },
                     ),
                     state = vm.uiState.collectAsState()
+                )
+            }
+            composable<Routes.League> { backStackEntry ->
+                val source: String = backStackEntry.arguments?.get("source") as String
+                val vm: LeagueViewModel by inject(LeagueViewModel::class.java)
+                vm.getLeagues(source)
+                LeagueScreen(
+                    state = vm.uiState.collectAsState(),
                 )
             }
         }

@@ -12,10 +12,5 @@ sealed class Routes {
     data object Search
 
     @Serializable
-    data class League(val league: LeagueParameter)
+    data class League(val source: String)
 }
-
-@Serializable
-data class LeagueParameter(
-    val id: String
-)
