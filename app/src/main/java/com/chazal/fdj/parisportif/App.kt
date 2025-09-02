@@ -1,17 +1,19 @@
 package com.chazal.fdj.parisportif
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.chazal.fdj.designsystem.theme.FDJTheme
 import com.chazal.fdj.league.presentation.LeagueScreen
 import com.chazal.fdj.league.presentation.LeagueViewModel
 import com.chazal.fdj.parisportif.Routes.Search
-import com.chazal.fdj.parisportif.ui.theme.FDJTheme
 import com.chazal.fdj.search.presentation.SearchAction
 import com.chazal.fdj.search.presentation.SearchScreen
 import com.chazal.fdj.search.presentation.SearchViewModel
@@ -24,8 +26,8 @@ fun App(
     FDJTheme {
         NavHost(
             navController = navController,
-            startDestination = Routes.Search,
-            modifier = Modifier.fillMaxSize()
+            startDestination = Search,
+            modifier = Modifier.fillMaxSize().background(color = Color.LightGray)
         ) {
             composable<Search> {
                 val vm: SearchViewModel by inject(SearchViewModel::class.java)

@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.bundles.retrofit)
     implementation(project(":network"))
     implementation(project(":shared"))
+    implementation(project(":designsystem"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

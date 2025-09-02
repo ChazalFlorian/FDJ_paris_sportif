@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.chazal.fdj.league"
+    namespace = "com.chazal.fdj.designsystem"
     compileSdk = 36
 
     defaultConfig {
@@ -41,16 +41,11 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.koin.android)
-    implementation(libs.glide)
-    implementation(libs.bundles.retrofit)
-    implementation(project(":network"))
-    implementation(project(":shared"))
-    implementation(project(":designsystem"))
+    implementation(libs.androidx.animation.core)
+    implementation(libs.androidx.foundation)
+    testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    testImplementation(libs.bundles.test)
-    testImplementation(project(":shared"))
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }

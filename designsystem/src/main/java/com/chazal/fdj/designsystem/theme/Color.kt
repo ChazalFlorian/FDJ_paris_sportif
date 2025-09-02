@@ -1,4 +1,4 @@
-package com.chazal.fdj.parisportif.ui.theme
+package com.chazal.fdj.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

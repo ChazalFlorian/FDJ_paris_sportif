@@ -60,4 +60,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(project(":search"))
     implementation(project(":league"))
+    implementation(project(":designsystem"))
 }

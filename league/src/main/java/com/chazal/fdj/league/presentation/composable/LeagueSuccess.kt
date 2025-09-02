@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
+import com.chazal.fdj.league.domain.model.LeagueItemBlockUI
 import com.chazal.fdj.league.domain.model.LeagueUI
 import com.chazal.fdj.league.presentation.LeagueScreenState
 
@@ -53,7 +54,16 @@ fun LeagueSuccessPreview() {
     LeagueSuccess(
         state = LeagueScreenState.Success(
             content = LeagueUI(
-                content = listOf()
+                content = listOf(
+                    LeagueItemBlockUI(
+                        logoUrl = "adada",
+                        description = "aad"
+                    ),
+                    LeagueItemBlockUI(
+                        logoUrl = "lolo",
+                        description = "aab"
+                    )
+                )
             )
         )
     )
